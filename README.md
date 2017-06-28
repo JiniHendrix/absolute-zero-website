@@ -1,0 +1,1 @@
+Standalone store for Absolute Zero
