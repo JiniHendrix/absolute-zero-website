@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { object } from 'prop-types';
+import NavBar from './NavBar';
 
 export default class App extends Component { //eslint-disable-line 
   constructor() {
@@ -17,10 +19,14 @@ export default class App extends Component { //eslint-disable-line
 
   render() {
     return (
-      <a href="#" onClick={this.handleClick} role="Button">
-        <h1>Hello World</h1>
-        <h2>{this.state.count}</h2>
-      </a>
+      <div>
+        <NavBar />
+        {this.props.children}
+      </div>
     );
   }
 }
+
+App.propTypes = {
+  children: object.isRequired, //eslint-disable-line
+};
