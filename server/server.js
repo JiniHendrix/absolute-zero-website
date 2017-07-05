@@ -6,7 +6,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-app.use(express.static(path.resolve(__dirname, '../public')));
+app.use(/\/(|about|products)\/$/, express.static(path.resolve(__dirname, '../public')));
+// app.use('/scripts', express.static(path.resolve(__dirname, '../public')));
 
 if (process.env.NODE_ENV !== 'development') {
   console.log('Production environment');
