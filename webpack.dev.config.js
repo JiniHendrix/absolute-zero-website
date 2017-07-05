@@ -20,7 +20,4 @@ module.exports = Merge(CommonConfig, {
     new Webpack.NamedModulesPlugin(),
     new Webpack.NoEmitOnErrorsPlugin(),
   ],
-  resolve: {
-    extensions: ['.js', '.jsx', 'map'],
-  },
 });
