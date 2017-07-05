@@ -1,15 +1,33 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader'; //eslint-disable-line
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
+import { Router, Route, browserHistory } from 'react-router';
+import { routerReducer, syncHistoryWithStore } from 'react-router-redux'; //eslint-disable-line
 import App from './components/App.jsx'; //eslint-disable-line
 import styles from './styles/main.scss'; //eslint-disable-line
+import reducer from './mainReducer';
 
 const rootEl = document.getElementById('root');
+const store = createStore(combineReducers({
+  reducer,
+  routing: routerReducer,
+}));
+const history = syncHistoryWithStore(browserHistory, store);
+const scaffold = Component => (
+  <Provider store={store}>
+    <Router history={history}>
+      <Route path="/" component={Component} />
+    </Router>
+  </Provider>
+);
+
 
 const hotRender = Component =>
   render(
     <AppContainer>
-      <Component />
+      {scaffold(Component)}
     </AppContainer>,
     rootEl,
   );
@@ -20,5 +38,5 @@ if (module.hot) {
     hotRender(App);
   });
 } else {
-  render(<App />, rootEl);
+  render(scaffold(App), rootEl);
 }
