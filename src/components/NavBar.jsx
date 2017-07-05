@@ -6,14 +6,14 @@ const NavBar = () => (
     <Link to="/">
       <img src="#" alt="logo" />
     </Link>
-    <ul className="nav">
-      <li>
+    <ul className="nav-links-wrapper">
+      <li className="nav-link">
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li className="nav-link">
         <Link to="/about">About</Link>
       </li>
-      <li>
+      <li className="nav-link">
         <Link to="/products">Products</Link>
       </li>
     </ul>

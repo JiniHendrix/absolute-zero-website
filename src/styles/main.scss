@@ -1,3 +1,19 @@
 body {
   margin: 0;
 }
+
+.navbar {
+  height: 50px;
+
+  .nav-links-wrapper {
+    height: 50px;
+
+    .nav-link {
+      height: 50px;
+      padding: 0 10px 0;
+      font-size: 16px;
+      line-height: 50px;
+      text-align: center;
+    }
+  }
+}
