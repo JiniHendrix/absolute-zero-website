@@ -6,7 +6,8 @@ module.exports = {
         "import"
     ],
     "rules": {
-        "jsx-a11y/href-no-hash": "off"
+        "jsx-a11y/href-no-hash": "off",
+        "linebreak-style": "off"
     },
     "globals": {
         "window": true,
