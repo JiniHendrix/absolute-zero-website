@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const NavBar = () => (
-  <nav>
-    <Link to="/">
+  <nav className="navbar">
+    <Link className="logo" to="/">
       <img src="#" alt="logo" />
     </Link>
     <ul className="nav-links-wrapper">
@@ -17,6 +17,11 @@ const NavBar = () => (
         <Link to="/products">Products</Link>
       </li>
     </ul>
+    <button className="nav-btn">
+      <hr />
+      <hr />
+      <hr />
+    </button>
   </nav>
 );
 

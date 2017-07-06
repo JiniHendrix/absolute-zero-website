@@ -28,5 +28,5 @@ export default class App extends Component { //eslint-disable-line
 }
 
 App.propTypes = {
-  children: object.isRequired, //eslint-disable-line
+  children: object, //eslint-disable-line
 };

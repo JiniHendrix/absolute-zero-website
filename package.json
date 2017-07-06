@@ -8,7 +8,8 @@
     "build": "webpack --config ./webpack.prod.config.js",
     "start": "node server/server.js",
     "lint": "./node_modules/eslint/bin/eslint.js ./**",
-    "hmr": "cross-env NODE_ENV=development nodemon server/server.js"
+    "hmr": "cross-env NODE_ENV=development nodemon server/server.js",
+    "validate": "npm ls"
   },
   "author": "",
   "license": "ISC",
@@ -46,5 +47,10 @@
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0",
     "webpack-split-by-path": "^2.0.0"
-  }
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
 }

@@ -27,7 +27,6 @@ const scaffold = Component => (
   </Provider>
 );
 
-
 const hotRender = Component =>
   render(
     <AppContainer>
