@@ -1,0 +1,135 @@
+$hidden-height: 93px;
+
+@media (max-width: 700px) {
+  .nav-links-wrapper {
+    display: none !important;
+  }
+
+  .nav-btn {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 700px) {
+  .hidden-menu {
+    display: none !important;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+.navbar {
+  height: 50px;
+  border-bottom: 1px solid black;
+  position: relative;
+  z-index: 10;
+  background-color: white;
+
+  .logo {
+    display: inline-block;
+    margin-left: 10px;
+    height: 50px;
+
+    img {
+      height: 50px;
+    }
+  }
+  
+  .nav-links-wrapper {
+    height: 50px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    float: right;
+    margin-right: 10px;
+
+    .nav-link {
+      height: 50px;
+      padding: 0 10px 0;
+      font-size: 16px;
+      line-height: 50px;
+      text-align: center;
+      display: inline-block;
+    }
+  }
+
+  .nav-btn {
+    display: none;
+    float: right;
+    margin: 10px 10px 0 0;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    padding: 0;
+    border-radius: 5px;
+    border-color: black;
+    cursor: pointer;
+
+    .menu-bar {
+      margin-top: 5px;
+      margin-bottom: 0;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: black;
+      height: 2px;
+      border-radius: 5px;
+      transition: transform .5s ease-in-out;
+      position: relative;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.pos {
+  position: relative;
+  width: 100%;
+  z-index: -100;
+}
+
+.hidden-menu {
+  width: 100%;
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: -$hidden-height;
+  transition: top .5s;
+
+  .hidden-nav-link {
+    text-align: center;
+    border-bottom: 1px solid black;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+  }
+}
+
+.rotate-top {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 3.5px !important;
+}
+
+.rotate-bot {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: -3.5px !important;
+}
+
+.turn-off {
+  display: none;
+}
+
+.turn-on {
+  top: 0px !important;
+}
+
+.move-down {
+  margin-top: $hidden-height;
+}

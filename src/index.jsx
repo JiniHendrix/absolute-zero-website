@@ -6,8 +6,8 @@ import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
 import { routerReducer, syncHistoryWithStore } from 'react-router-redux'; //eslint-disable-line
 import App from './components/App'; //eslint-disable-line
-import About from './components/About';
-import styles from './styles/main.scss'; //eslint-disable-line
+import About from './components/About/About';
+import styles from './main.scss'; //eslint-disable-line
 import reducer from './mainReducer';
 
 const rootEl = document.getElementById('root');

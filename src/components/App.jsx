@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { object } from 'prop-types';
-import NavBar from './NavBar';
+import NavBar from './NavBar/NavBar';
 
 export default class App extends Component { //eslint-disable-line 
   constructor() {
@@ -21,7 +21,9 @@ export default class App extends Component { //eslint-disable-line
     return (
       <div>
         <NavBar />
-        {this.props.children}
+        <div className="container">
+          {this.props.children}
+        </div>
       </div>
     );
   }

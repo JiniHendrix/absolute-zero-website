@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+}
+
+.container {
+  margin-top: 0;
+  transition: margin .5s;
+}
+
+@import "./components/NavBar/NavBar.scss"
