@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import LoginSignupCart from './LoginSignupCart';
 
 const NavBar = () => {
   const navs = {
@@ -56,6 +57,7 @@ const NavBar = () => {
 
   return (
     <div className="navbar-wrapper">
+      <LoginSignupCart />
       <nav className="navbar">
         <Link className="logo" to="/">
           <img src="#" alt="logo" />

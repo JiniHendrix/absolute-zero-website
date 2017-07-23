@@ -7,6 +7,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import { routerReducer, syncHistoryWithStore } from 'react-router-redux'; //eslint-disable-line
 import App from './components/App'; //eslint-disable-line
 import About from './components/About/About';
+import Products from './components/Products/Products';
 import styles from './main.scss'; //eslint-disable-line
 import reducer from './mainReducer';
 
@@ -22,6 +23,7 @@ const scaffold = Component => (
     <Router history={history}>
       <Route path="/" component={Component}>
         <Route path="/about" component={About} />
+        <Route path="/products" component={Products} />
       </Route>
     </Router>
   </Provider>
